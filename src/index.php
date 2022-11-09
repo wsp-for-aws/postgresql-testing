@@ -1,12 +1,12 @@
 <?php
-$dbType = getenv('DB_CONNECTION');
+$dbType = getenv('DB_TYPE');
 
 if (!$dbType) {
-    die ("No DB_CONNECTION env was found");
+    die ("No DB_TYPE env was found");
 }
 
 if ($dbType !== 'postgres') {
-    die ("Error, DB_CONNECTION environment variable is $dbType instead of postgres");
+    die ("Error, DB_TYPE environment variable is $dbType instead of postgres");
 }
 
 $dbHost = getenv('DB_HOST');
